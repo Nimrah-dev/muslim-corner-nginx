@@ -84,6 +84,8 @@ Nginx configuration itself is a small part of the work — most of the real lear
 
 ## Screenshots
 
-   ![App running on port 3000](Screenshots/muslimcorner-nginx1.jpg) (Screenshots/muslimcorner-nginx.jpg)
-   ![Response through Nginx over HTTPS](Screenshots/muslimcorner-nginx2.jpg) (Screenshots/muslimcorner-nginx3.jpg)
+   ![App running on port 3000](Screenshots/muslimcorner-nginx1.jpg) 
+   ![App running on port 3000 in browser](Screenshots/muslimcorner-nginx.jpg)
+   ![Response through Nginx over HTTPS](Screenshots/muslimcorner-nginx2.jpg) 
+     ![Response through Nginx over HTTPS](Screenshots/muslimcorner-nginx3.jpg)
    

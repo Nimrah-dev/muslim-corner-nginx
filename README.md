@@ -81,3 +81,11 @@ curl -I http://localhost         # returns 301 → https://localhost/
 ## Key Takeaway
 
 Nginx configuration itself is a small part of the work — most of the real learning came from diagnosing why a correctly-written config still didn't serve traffic (permissions, process state, network layer), which mirrors the kind of troubleshooting expected in an actual DevOps/deployment role.
+
+## Screenshots
+
+   ![App running on port 3000](Screenshots/muslimcorner nginx 1.jpg)
+   (Screenshots/muslimcorner nginx.jpg)
+   ![Response through Nginx over HTTPS](Screenshots/muslimcorner nginx 2.jpg)
+   (Screenshots/muslimcorner nginx 3.jpg)
+   

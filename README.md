@@ -78,6 +78,20 @@ curl -I http://localhost         # returns 301 → https://localhost/
 - **`502 Bad Gateway`**: occurred whenever the upstream Next.js process wasn't actually running — a reminder that Nginx reverse-proxies to a live process, not a static target; the app has to be kept running independently of Nginx.
 - **Config syntax typo (`ssl_certificficate`)**: caught by `nginx -t` before reload, which is why validating config before every reload is standard practice rather than optional.
 
+## Nginx Health Check Script
+
+`nginx-monitor.sh` is a Bash script that checks whether Nginx is running using
+`systemctl is-active`. If Nginx is down, it restarts the service, waits 3 seconds,
+checks again, and writes each result with a timestamp to a log file
+(`~/bash/nginx-log.txt`).
+
+```bash
+chmod +x nginx-monitor.sh
+./nginx-monitor.sh
+```
+
+The script runs when executed. To run it automatically, it can be scheduled with cron.
+
 ## Key Takeaway
 
 Nginx configuration itself is a small part of the work — most of the real learning came from diagnosing why a correctly-written config still didn't serve traffic (permissions, process state, network layer), which mirrors the kind of troubleshooting expected in an actual DevOps/deployment role.
